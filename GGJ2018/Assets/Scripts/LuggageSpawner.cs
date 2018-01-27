@@ -29,7 +29,7 @@ public class LuggageSpawner : MonoBehaviour {
     void SpawLuggage() {
         int index = Random.Range(0, LuggageList.Length);
         GameObject luggage = Instantiate(LuggageList[index], transform.position, Random.rotation, null);
-        luggage.GetComponent<Rigidbody>().AddForce(5f * Vector3.right, ForceMode.Impulse);
+        //luggage.GetComponent<Rigidbody>().AddForce(5f * Vector3.right, ForceMode.Impulse);
     }
 	
 	// Update is called once per frame
