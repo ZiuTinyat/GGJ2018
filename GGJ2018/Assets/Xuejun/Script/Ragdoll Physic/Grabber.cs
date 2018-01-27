@@ -37,7 +37,7 @@ public class Grabber : MonoBehaviour
         {
             m_grabHandler.Grabbing = true;
             Debug.Log("Mouse Down, Start Grab");
-            StartGrab();
+            //StartGrab();
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -56,14 +56,14 @@ public class Grabber : MonoBehaviour
         }
     }
 
-    public void StartGrab()
-    {
-        if (m_rbToGrab)
-        {
-            FixedJoint joint = gameObject.AddComponent<FixedJoint>();
-            joint.connectedBody = m_rbToGrab;
-        }
-    }
+    //public void StartGrab()
+    //{
+    //    if (m_rbToGrab)
+    //    {
+    //        FixedJoint joint = gameObject.AddComponent<FixedJoint>();
+    //        joint.connectedBody = m_rbToGrab;
+    //    }
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {

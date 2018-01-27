@@ -16,7 +16,7 @@ public class MouseFollower : MonoBehaviour {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
         int layerMask = 1 << 9;
-        Physics.Raycast(ray, out hitInfo, layerMask);
+        Physics.Raycast(ray, out hitInfo, 12,layerMask);
         Vector3 hitPoint = hitInfo.point;
         transform.position = new Vector3(hitPoint.x, hitPoint.y, transform.position.z);
 	}
