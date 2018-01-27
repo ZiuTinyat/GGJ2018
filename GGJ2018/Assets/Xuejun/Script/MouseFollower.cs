@@ -13,9 +13,10 @@ public class MouseFollower : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        RaycastHit hitInfo;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Physics.Raycast(ray, out hitInfo, 9);
+        RaycastHit hitInfo;
+        int layerMask = 1 << 9;
+        Physics.Raycast(ray, out hitInfo, layerMask);
         Vector3 hitPoint = hitInfo.point;
         transform.position = new Vector3(hitPoint.x, hitPoint.y, transform.position.z);
 	}
