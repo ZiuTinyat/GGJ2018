@@ -99,13 +99,13 @@ public class Controller : MonoBehaviour
         if (Input.GetKey("left" ) )
         {
             m_animation.Run();
-            m_movement.Move(new Vector3(m_movingSpeed, 0, 0));
+            m_movement.Move(new Vector3(- m_movingSpeed, 0, 0));
         }
 
         if (Input.GetKey("right"))
         {
             m_animation.Run();
-            m_movement.Move(new Vector3(-m_movingSpeed, 0, 0));
+            m_movement.Move(new Vector3(m_movingSpeed, 0, 0));
         }
     }
 
