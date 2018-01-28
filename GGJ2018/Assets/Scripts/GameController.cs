@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 
     public static GameController Instance { get; private set; }
     public static int Score { get; private set; }
+    public static int Money { get; private set; }
     private static int ScoreStartSize;
 
     [SerializeField] Text ScoreText;
