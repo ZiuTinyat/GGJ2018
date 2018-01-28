@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: d62fc63b2b104a448affc04adfd136b9
+timeCreated: 1517114720
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: bag
+    100002: //RootNode
+    100004: bag_cell
+    100006: bag_cell.001
+    100008: bag_cell.002
+    100010: bag_cell.003
+    100012: bag_cell.004
+    100014: bag_cell.005
+    100016: bag_cell.006
+    100018: bag_cell.007
+    100020: bag_cell.008
+    100022: bag_cell.009
+    100024: bag_cell.010
+    100026: bag_cell.011
+    100028: bag_cell.012
+    100030: bag_cell.013
+    100032: bag_cell.014
+    100034: bag_cell.015
+    100036: bag_cell.016
+    100038: bag_cell.017
+    100040: bag_cell.018
+    100042: bag_cell.019
+    100044: bag_cell.020
+    100046: bag_cell.022
+    100048: bag_cell.024
+    100050: bag_cell.026
+    100052: bag_cell.027
+    100054: bag_cell.028
+    100056: bag_cell.032
+    100058: bag_cell.034
+    100060: bag_cell.035
+    100062: bag_cell.037
+    100064: bag_cell.042
+    100066: bag_cell.043
+    100068: bag_cell.045
+    100070: bag_cell.046
+    100072: suitcase1
+    100074: suitcase2
+    100076: suitcase3
+    400000: bag
+    400002: //RootNode
+    400004: bag_cell
+    400006: bag_cell.001
+    400008: bag_cell.002
+    400010: bag_cell.003
+    400012: bag_cell.004
+    400014: bag_cell.005
+    400016: bag_cell.006
+    400018: bag_cell.007
+    400020: bag_cell.008
+    400022: bag_cell.009
+    400024: bag_cell.010
+    400026: bag_cell.011
+    400028: bag_cell.012
+    400030: bag_cell.013
+    400032: bag_cell.014
+    400034: bag_cell.015
+    400036: bag_cell.016
+    400038: bag_cell.017
+    400040: bag_cell.018
+    400042: bag_cell.019
+    400044: bag_cell.020
+    400046: bag_cell.022
+    400048: bag_cell.024
+    400050: bag_cell.026
+    400052: bag_cell.027
+    400054: bag_cell.028
+    400056: bag_cell.032
+    400058: bag_cell.034
+    400060: bag_cell.035
+    400062: bag_cell.037
+    400064: bag_cell.042
+    400066: bag_cell.043
+    400068: bag_cell.045
+    400070: bag_cell.046
+    400072: suitcase1
+    400074: suitcase2
+    400076: suitcase3
+    2100000: 02 - Default
+    2300000: bag
+    2300002: bag_cell
+    2300004: bag_cell.001
+    2300006: bag_cell.002
+    2300008: bag_cell.003
+    2300010: bag_cell.004
+    2300012: bag_cell.005
+    2300014: bag_cell.006
+    2300016: bag_cell.007
+    2300018: bag_cell.008
+    2300020: bag_cell.009
+    2300022: bag_cell.010
+    2300024: bag_cell.011
+    2300026: bag_cell.012
+    2300028: bag_cell.013
+    2300030: bag_cell.014
+    2300032: bag_cell.015
+    2300034: bag_cell.016
+    2300036: bag_cell.017
+    2300038: bag_cell.018
+    2300040: bag_cell.019
+    2300042: bag_cell.020
+    2300044: bag_cell.022
+    2300046: bag_cell.024
+    2300048: bag_cell.026
+    2300050: bag_cell.027
+    2300052: bag_cell.028
+    2300054: bag_cell.032
+    2300056: bag_cell.034
+    2300058: bag_cell.035
+    2300060: bag_cell.037
+    2300062: bag_cell.042
+    2300064: bag_cell.043
+    2300066: bag_cell.045
+    2300068: bag_cell.046
+    2300070: suitcase1
+    2300072: suitcase2
+    2300074: suitcase3
+    3300000: bag
+    3300002: bag_cell
+    3300004: bag_cell.001
+    3300006: bag_cell.002
+    3300008: bag_cell.003
+    3300010: bag_cell.004
+    3300012: bag_cell.005
+    3300014: bag_cell.006
+    3300016: bag_cell.007
+    3300018: bag_cell.008
+    3300020: bag_cell.009
+    3300022: bag_cell.010
+    3300024: bag_cell.011
+    3300026: bag_cell.012
+    3300028: bag_cell.013
+    3300030: bag_cell.014
+    3300032: bag_cell.015
+    3300034: bag_cell.016
+    3300036: bag_cell.017
+    3300038: bag_cell.018
+    3300040: bag_cell.019
+    3300042: bag_cell.020
+    3300044: bag_cell.022
+    3300046: bag_cell.024
+    3300048: bag_cell.026
+    3300050: bag_cell.027
+    3300052: bag_cell.028
+    3300054: bag_cell.032
+    3300056: bag_cell.034
+    3300058: bag_cell.035
+    3300060: bag_cell.037
+    3300062: bag_cell.042
+    3300064: bag_cell.043
+    3300066: bag_cell.045
+    3300068: bag_cell.046
+    3300070: suitcase1
+    3300072: suitcase2
+    3300074: suitcase3
+    4300000: bag_cell.020
+    4300002: bag_cell.014
+    4300004: bag_cell.013
+    4300006: bag_cell.009
+    4300008: bag_cell.008
+    4300010: bag_cell.006
+    4300012: bag_cell.005
+    4300014: bag_cell.046
+    4300016: bag_cell.045
+    4300018: bag_cell.043
+    4300020: bag_cell.042
+    4300022: bag_cell.037
+    4300024: bag_cell.035
+    4300026: bag_cell.034
+    4300028: bag_cell.032
+    4300030: bag_cell.028
+    4300032: bag_cell.027
+    4300034: bag_cell.026
+    4300036: bag_cell.024
+    4300038: bag_cell.022
+    4300040: bag_cell.019
+    4300042: bag_cell.018
+    4300044: bag_cell.017
+    4300046: bag_cell.016
+    4300048: bag_cell.015
+    4300050: bag_cell.012
+    4300052: bag_cell.011
+    4300054: bag_cell.010
+    4300056: bag_cell.007
+    4300058: bag_cell.004
+    4300060: bag_cell.003
+    4300062: bag_cell.002
+    4300064: bag_cell.001
+    4300066: bag_cell
+    4300068: suitcase3
+    4300070: suitcase2
+    4300072: bag
+    4300074: suitcase1
+    7400000: suitcase3|bag|Take 001|BaseLayer
+    7400002: suitcase3|suitcase1|Take 001|BaseLayer
+    7400004: suitcase3|suitcase2|Take 001|BaseLayer
+    7400006: suitcase3|suitcase3|Take 001|BaseLayer
+    7400008: suitcase2|bag|Take 001|BaseLayer
+    7400010: suitcase2|suitcase1|Take 001|BaseLayer
+    7400012: suitcase2|suitcase2|Take 001|BaseLayer
+    7400014: suitcase2|suitcase3|Take 001|BaseLayer
+    7400016: bag|bag|Take 001|BaseLayer
+    7400018: bag|suitcase1|Take 001|BaseLayer
+    7400020: bag|suitcase2|Take 001|BaseLayer
+    7400022: bag|suitcase3|Take 001|BaseLayer
+    7400024: suitcase1|bag|Take 001|BaseLayer
+    7400026: suitcase1|suitcase1|Take 001|BaseLayer
+    7400028: suitcase1|suitcase2|Take 001|BaseLayer
+    7400030: suitcase1|suitcase3|Take 001|BaseLayer
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

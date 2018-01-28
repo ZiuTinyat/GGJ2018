@@ -8,6 +8,7 @@ TagManager:
   - IgnoreDrag
   - Luggage
   - Goal
+  - Ground
   layers:
   - Default
   - TransparentFX
