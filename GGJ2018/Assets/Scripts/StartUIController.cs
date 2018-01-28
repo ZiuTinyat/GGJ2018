@@ -5,6 +5,7 @@ using UnityEngine;
 public class StartUIController : MonoBehaviour {
 
     [SerializeField] SpriteRenderer FaderSprite, CreditSprite, StartSprite, ButtonSprite;
+    [SerializeField] AudioSource Beep;
 
     private Color TransparentColor = new Color(1f, 1f, 1f, 0f);
 
@@ -20,7 +21,7 @@ public class StartUIController : MonoBehaviour {
         yield return new WaitForSeconds(1f);
 
         // Show credit sprite
-        // TODO: Audio
+        Beep.Play();
         yield return StartCoroutine(FadeSprite(CreditSprite, 1f, Color.white));
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(FadeSprite(CreditSprite, 1f, TransparentColor));
@@ -48,9 +49,4 @@ public class StartUIController : MonoBehaviour {
             yield return null;
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
