@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23032276444667304}
   - component: {fileID: 64198528993209530}
   - component: {fileID: 54771130662518612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: suitcase1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
