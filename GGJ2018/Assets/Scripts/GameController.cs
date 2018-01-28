@@ -10,7 +10,9 @@ public class GameController : MonoBehaviour {
     public static int Money { get; private set; }
     private static int ScoreStartSize;
 
-    [SerializeField] Text ScoreText;
+    public float TotTime = 90f;
+
+    [SerializeField] Text ScoreText, TimeDownText;
     
     public static void AddScore(int add) {
         Score += add;
@@ -24,6 +26,10 @@ public class GameController : MonoBehaviour {
         Money += money;
     }
 
+    static IEnumerator GameProcess() {
+        yield return null;
+    }
+
     static IEnumerator ScoreEffect() {
         int increase = 40;
         while (increase > 0) {
@@ -35,9 +41,12 @@ public class GameController : MonoBehaviour {
 
     private void Awake() {
         Instance = this;
+        Score = 0;
+        Money = 0;
     }
 
     private void Start() {
         ScoreStartSize = Instance.ScoreText.fontSize;
+        StartCoroutine(GameProcess());
     }
 }
