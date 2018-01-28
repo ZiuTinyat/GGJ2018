@@ -3,26 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LuggageSpawner : MonoBehaviour {
+
+    public static LuggageSpawner Instance;
+    public static float SpawnInterval;
+    public static bool AllowSpawn;
     
     public GameObject[] LuggageList;
-    public bool Spawing = true;
+    private bool Spawning = false;
 
-	// Use this for initialization
-	void Start () {
-		if (LuggageList.Length == 0) {
-            Spawing = false;
-        }
-        StartCoroutine(SpawnCoroutine());
+    private void Awake() {
+        Instance = this;
+        SpawnInterval = 10f;
+        AllowSpawn = true;
+    }
+
+    // Use this for initialization
+    void Start () {
+        
 	}
 
-    IEnumerator SpawnCoroutine() {
-        float interval = 4f; // temporary
-        do {
-            yield return new WaitForSeconds(interval);
-            yield return new WaitUntil(() => Spawing);
-            SpawLuggage();
+    public void StartSpawn() {
+        if (Spawning) return;
+        Spawning = true;
+        StartCoroutine(SpawnCoroutine());
+    }
 
-        } while (true);
+    IEnumerator SpawnCoroutine() {
+        //float interval = 4f; // temporary
+        do {
+            yield return new WaitUntil(() => Spawning);
+            SpawLuggage();
+            yield return new WaitForSeconds(SpawnInterval);
+
+        } while (AllowSpawn);
 
     }
 
