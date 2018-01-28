@@ -92,7 +92,7 @@ public class Grabber : MonoBehaviour
 
 
         if (m_grabHandler && m_grabHandler.m_grabStrength >= 0.5f && m_grabHandler.Grabbing && !Joint2 && collision.gameObject.layer == 10)
-            {
+        {
                 if (collision.rigidbody)
                 {
                     foreach (var grabber in m_grabHandler.m_grabbers)
@@ -102,7 +102,6 @@ public class Grabber : MonoBehaviour
                             return;
                         }
                     }
-
                     m_grabHandler.StartGrab(collision.rigidbody);
                 }
 
@@ -110,6 +109,26 @@ public class Grabber : MonoBehaviour
             if (collision.gameObject.GetComponent<Rigidbody>())
             {
                 Joint2.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                if (collision.gameObject.GetComponentInParent<LuggageController>())
+                {
+                    LuggageController controller = collision.gameObject.GetComponentInParent<LuggageController>();
+                    collision.gameObject.GetComponentInParent<LuggageController>().InHand = true;
+                    Debug.Log(collision.gameObject.GetComponentInParent<LuggageController>().InHand);
+                }
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            if (collision.gameObject.GetComponentInParent<LuggageController>())
+            {
+                if (collision.gameObject.GetComponentInParent<LuggageController>().InHand)
+                {
+                    collision.gameObject.GetComponentInParent<LuggageController>().InHand = false;
+                }
             }
         }
     }

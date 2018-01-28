@@ -29,7 +29,6 @@ public class GrabHandler : MonoBehaviour
 
     public void StartGrab(Rigidbody rigidbody)
     {
-
     }
 
     public void EndGrab()
