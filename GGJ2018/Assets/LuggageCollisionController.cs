@@ -28,11 +28,12 @@ public class LuggageCollisionController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground") && !LuggageController.Crushed)
+        if (!LuggageController.Crushed)
         {
-            if (collision.relativeVelocity.magnitude >= m_relativeVelocity)
-            {
-                bagCollision.Invoke();
+            if (collision.gameObject.CompareTag("Ground")) {
+                if (collision.relativeVelocity.magnitude >= m_relativeVelocity) {
+                    bagCollision.Invoke();
+                }
             }
         }
     }
