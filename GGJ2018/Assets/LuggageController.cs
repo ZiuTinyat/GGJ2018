@@ -7,7 +7,7 @@ public class LuggageController : MonoBehaviour {
 
     private Rigidbody m_rigidbody;
     public bool Crushed;
-
+    public bool InHand;
     [SerializeField]
     private GameObject originalLuggage;
 

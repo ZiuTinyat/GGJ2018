@@ -30,7 +30,7 @@ public class LuggageCollisionController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!LuggageController.Crushed)
+        if (!LuggageController.Crushed && !LuggageController.InHand)
         {
             if (collision.gameObject.CompareTag("Ground")) {
                 if (collision.relativeVelocity.magnitude >= m_relativeVelocity) {

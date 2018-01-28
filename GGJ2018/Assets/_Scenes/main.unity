@@ -832,7 +832,13 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114877209270753650, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: Joint2
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 145641775261141974, guid: 8164038535fecde48854154d9b4b549b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8164038535fecde48854154d9b4b549b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1095334438
@@ -1061,7 +1067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad40a3c3acdb7e44a67f36199c72335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moneyParameter: 100
   ScoreText: {fileID: 1386825303}
 --- !u!4 &1320971705
 Transform:
