@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UltimateFracturing;
+using UnityEditor;
 
 [ExecuteInEditMode]
 public class FracturedObject : MonoBehaviour
@@ -587,6 +588,10 @@ public class FracturedObject : MonoBehaviour
                     float fChunkVolume = meshFilter.sharedMesh.bounds.size.x * meshFilter.sharedMesh.bounds.size.y * meshFilter.sharedMesh.bounds.size.z;
                     chunk.RelativeVolume = fChunkVolume / fTotalVolume;
                     chunk.Volume         = fChunkVolume;
+
+                    //string filePath = EditorUtility.SaveFilePanelInProject("mesh", "test", "fbx", "");
+                    //AssetDatabase.CreateAsset(meshFilter.sharedMesh, filePath);
+                    //AssetDatabase.SaveAssets();
                 }
             }
         }
