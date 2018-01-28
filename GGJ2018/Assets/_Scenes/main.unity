@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 154585115}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1314,10 +1314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LuggageList:
-  - {fileID: 1519761362713698, guid: df6fbfb3c3cf29241b3beb261d7f93b9, type: 2}
-  - {fileID: 1022623549054606, guid: ff5faa6d5bc9ffa488665c67438c5db7, type: 2}
-  - {fileID: 1781386424165338, guid: 355f23e7e9cb7a14fa5b904b4e3f3e83, type: 2}
-  - {fileID: 1980894252681636, guid: 276ed9a1d472229468507958002c9fa9, type: 2}
+  - {fileID: 1792316611676486, guid: 8a33ce21163d4c243921d933d2c8a367, type: 2}
+  - {fileID: 1848554803540986, guid: 2237342c196026249a641562ce9eec6e, type: 2}
+  - {fileID: 1353674470110938, guid: e08e7eba332c5c64e9f38d423947aec0, type: 2}
+  - {fileID: 1210883978348580, guid: e431ead36fa04ac418918df4f5b76a89, type: 2}
   Spawing: 1
 --- !u!4 &1603040368
 Transform:

@@ -8,7 +8,7 @@ public class LuggageCollisionController : MonoBehaviour {
     UnityEvent bagCollision;
     public LuggageController LuggageController;
     [SerializeField]
-    private float m_relativeVelocity = 5;
+    private float m_relativeVelocity = 0f;
 
     // Use this for initialization
     void Start () {
