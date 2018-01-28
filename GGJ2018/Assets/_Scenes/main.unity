@@ -155,6 +155,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e74a48b25c9fce42bcdb362b8976731, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &66934500 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114044615980490494, guid: 8164038535fecde48854154d9b4b549b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1032844557}
+  m_Script: {fileID: 11500000, guid: c381b70522ae9c843b556104b9d37d6b, type: 3}
 --- !u!1 &154585110
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +605,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &502026448 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114877209270753650, guid: 8164038535fecde48854154d9b4b549b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1032844557}
+  m_Script: {fileID: 11500000, guid: c381b70522ae9c843b556104b9d37d6b, type: 3}
 --- !u!1001 &722903863
 Prefab:
   m_ObjectHideFlags: 0
@@ -714,6 +726,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114712005433585298, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_grabbers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4792546739284554, guid: 8164038535fecde48854154d9b4b549b, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2.26
@@ -756,6 +773,46 @@ Prefab:
       propertyPath: m_targetTransform
       value: 
       objectReference: {fileID: 484815485}
+    - target: {fileID: 114758881528215052, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_leftSideForward
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114758881528215052, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_sinceWall
+      value: 6.0626717
+      objectReference: {fileID: 0}
+    - target: {fileID: 114758881528215052, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_sinceJumped
+      value: 5.0626693
+      objectReference: {fileID: 0}
+    - target: {fileID: 114758881528215052, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_sinceFallen
+      value: 13.431341
+      objectReference: {fileID: 0}
+    - target: {fileID: 114758881528215052, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_sinceGrabbed
+      value: 13.431341
+      objectReference: {fileID: 0}
+    - target: {fileID: 114758881528215052, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_sinceThrown
+      value: 13.431341
+      objectReference: {fileID: 0}
+    - target: {fileID: 114712005433585298, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_grabbers.Array.data[0]
+      value: 
+      objectReference: {fileID: 502026448}
+    - target: {fileID: 114712005433585298, guid: 8164038535fecde48854154d9b4b549b,
+        type: 2}
+      propertyPath: m_grabbers.Array.data[1]
+      value: 
+      objectReference: {fileID: 66934500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8164038535fecde48854154d9b4b549b, type: 2}
   m_IsPrefabParent: 0
@@ -1158,6 +1215,11 @@ Prefab:
     - target: {fileID: 1848554803540986, guid: 2237342c196026249a641562ce9eec6e, type: 2}
       propertyPath: m_Name
       value: Suitcase1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114377427590984272, guid: 2237342c196026249a641562ce9eec6e,
+        type: 2}
+      propertyPath: LuggageController
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2237342c196026249a641562ce9eec6e, type: 2}

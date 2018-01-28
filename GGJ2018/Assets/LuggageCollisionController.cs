@@ -7,9 +7,11 @@ public class LuggageCollisionController : MonoBehaviour {
 
     UnityEvent bagCollision;
     public LuggageController LuggageController;
+    [SerializeField]
+    private float m_relativeVelocity = 5;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         LuggageController = GetComponentInParent<LuggageController>();
         if (bagCollision == null)
         {
@@ -19,7 +21,8 @@ public class LuggageCollisionController : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
@@ -27,7 +30,10 @@ public class LuggageCollisionController : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Ground") && !LuggageController.Crushed)
         {
-            bagCollision.Invoke();
+            if (collision.relativeVelocity.magnitude >= m_relativeVelocity)
+            {
+                bagCollision.Invoke();
+            }
         }
     }
 }
