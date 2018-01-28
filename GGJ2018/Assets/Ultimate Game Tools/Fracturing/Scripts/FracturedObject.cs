@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UltimateFracturing;
-using UnityEditor;
 
 [ExecuteInEditMode]
 public class FracturedObject : MonoBehaviour

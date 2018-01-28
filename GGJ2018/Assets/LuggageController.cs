@@ -31,15 +31,18 @@ public class LuggageController : MonoBehaviour {
     public void Crush()
     {
         Crushed = true;
-        Debug.Log("Box Crushed");
-        brokenLuggage.SetActive(true);
-        brokenLuggage.transform.position = originalLuggage.transform.position;
-        brokenLuggage.transform.rotation = originalLuggage.transform.rotation;
+        if (brokenLuggage)
+        {
+            brokenLuggage.SetActive(true);
+            brokenLuggage.transform.position = originalLuggage.transform.position;
+            brokenLuggage.transform.rotation = originalLuggage.transform.rotation;
+            Destroy(originalLuggage);
+        }
+
         if (!m_crackSoundSource.isPlaying)
         {
             m_crackSoundSource.Play();
         }
-        Destroy(originalLuggage);
         Invoke("DestroyObject", 10f);
     } 
 
