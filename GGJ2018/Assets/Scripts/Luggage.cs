@@ -11,7 +11,8 @@ public class Luggage : MonoBehaviour {
         Default, 
         Common, 
         Valuable, 
-        Luxury
+        Luxury,
+        Guitar
     }
 
     public LuggageType Type;
@@ -27,6 +28,7 @@ public class Luggage : MonoBehaviour {
             ValueTable.Add(LuggageType.Common, 5);
             ValueTable.Add(LuggageType.Valuable, 10);
             ValueTable.Add(LuggageType.Luxury, 25);
+            ValueTable.Add(LuggageType.Guitar, 75);
         }
     }
 }

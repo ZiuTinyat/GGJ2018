@@ -3681,7 +3681,7 @@ MonoBehaviour:
   ReadyGo: {fileID: 8300000, guid: fb616831ca1b3a845930ed5254982bf0, type: 3}
   HurryUp: {fileID: 8300000, guid: 42e006b26d6e82d4bba1e40bbb0d4915, type: 3}
   TimeOver: {fileID: 8300000, guid: 63feea82f0f2f2f47b2ddd9dedad4f93, type: 3}
-  Grab: {fileID: 0}
+  Grab: {fileID: 8300000, guid: bcc52e7c123f1c8448c648c2e5092dc9, type: 3}
 --- !u!4 &1320971705
 Transform:
   m_ObjectHideFlags: 0
@@ -4300,6 +4300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LuggageList:
+  - {fileID: 1307286676971402, guid: f6d53641485db1f4fb95823115109593, type: 2}
   - {fileID: 1792316611676486, guid: 8a33ce21163d4c243921d933d2c8a367, type: 2}
   - {fileID: 1962023515949552, guid: adbb2f849b1dd96468035bf226e8aca3, type: 2}
   - {fileID: 1252934676267688, guid: 728b3af15cbd2384983e3bd18caaa736, type: 2}
@@ -4701,7 +4702,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 3f530f86a8d3fa34e9fb946394f76a23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.52
+      value: -16.94
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f530f86a8d3fa34e9fb946394f76a23, type: 3}
       propertyPath: m_LocalPosition.y
