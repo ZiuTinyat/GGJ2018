@@ -2265,7 +2265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c041a3ed4840df4f92ecba9c227103a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_forceFactor: 100
+  m_forceFactor: 80
   m_targetTransform: {fileID: 0}
 --- !u!114 &114332857318508440
 MonoBehaviour:
@@ -2766,7 +2766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bae94748350544aa2a2cb1fedafa20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_forceFactor: 100
+  m_forceFactor: 80
   m_targetTransform: {fileID: 0}
 --- !u!114 &114911053648401026
 MonoBehaviour:
