@@ -28,8 +28,9 @@ public class LuggageController : MonoBehaviour {
     {
         Crushed = true;
         Debug.Log("Box Crushed");
-        Destroy(originalLuggage);
         brokenLuggage.SetActive(true);
-    } 
-
+        brokenLuggage.transform.position = originalLuggage.transform.position;
+        brokenLuggage.transform.rotation = originalLuggage.transform.rotation;
+        Destroy(originalLuggage);
+    }
 }

@@ -91,18 +91,18 @@ public class Controller : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("space") || Input.GetKeyDown("up"))
+        if (Input.GetKeyDown("space") || Input.GetKeyDown("up") || Input.GetKeyDown("w") )
         {
             Jump(false, false);
         }
 
-        if (Input.GetKey("left" ) )
+        if (Input.GetKey("left") || Input.GetKeyDown("a") )
         {
             m_animation.Run();
             m_movement.Move(new Vector3(- m_movingSpeed, 0, 0));
         }
 
-        if (Input.GetKey("right"))
+        if (Input.GetKey("right") || Input.GetKeyDown("d"))
         {
             m_animation.Run();
             m_movement.Move(new Vector3(m_movingSpeed, 0, 0));
