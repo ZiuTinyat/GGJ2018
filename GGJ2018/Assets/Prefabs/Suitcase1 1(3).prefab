@@ -4711,7 +4711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LuggageController: {fileID: 0}
-  m_relativeVelocity: 4
+  m_relativeVelocity: 5
   m_moneyParameter: 50
 --- !u!114 &114978053375636410
 MonoBehaviour:
