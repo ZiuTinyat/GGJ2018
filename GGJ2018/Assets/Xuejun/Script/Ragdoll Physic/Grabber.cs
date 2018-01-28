@@ -109,6 +109,7 @@ public class Grabber : MonoBehaviour
             if (collision.gameObject.GetComponent<Rigidbody>())
             {
                 Joint2.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                GameController.Instance.PlayAudioClip(GameController.Instance.Grab);
                 if (collision.gameObject.GetComponentInParent<LuggageController>())
                 {
                     LuggageController controller = collision.gameObject.GetComponentInParent<LuggageController>();

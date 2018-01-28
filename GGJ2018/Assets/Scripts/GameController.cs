@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour {
     public float StartInterval = 8f, SecondInterval = 6f, ThirdInterval = 4f;
 
     [SerializeField] Text ScoreText, TimeDownText;
+    [SerializeField] AudioClip ReadyGo, HurryUp, TimeOver;
+    public AudioClip Grab;
     
     public static void AddScore(int add) {
         Score += add;
@@ -27,18 +29,21 @@ public class GameController : MonoBehaviour {
         Money += money;
     }
 
-    static IEnumerator GameProcess() {
-        Instance.TimeDownText.text = Mathf.RoundToInt(Instance.TotTime).ToString();
-        LuggageSpawner.SpawnInterval = Instance.StartInterval;
+    IEnumerator GameProcess() {
+        TimeDownText.text = Mathf.RoundToInt(TotTime).ToString();
+        LuggageSpawner.SpawnInterval = StartInterval;
+        yield return new WaitForSeconds(5.4f);
+        StartCoroutine(PlayAudioClip(ReadyGo));
         yield return new WaitForSeconds(2f);
-        // audio: ready go
+
         LuggageSpawner.Instance.StartSpawn();
-        float time = Instance.TotTime;
+        float time = TotTime;
+        float nextHurryTime = TotTime - Random.Range(10f, 20f);
         while (time > 0) {
-            Instance.TimeDownText.text = Mathf.CeilToInt(time).ToString();
+            TimeDownText.text = Mathf.CeilToInt(time).ToString();
             time -= Time.deltaTime;
 
-            if (time < Instance.ChangeTime && LuggageSpawner.SpawnInterval > Instance.SecondInterval) {
+            if (time < ChangeTime && LuggageSpawner.SpawnInterval > SecondInterval) {
                 LuggageSpawner.SpawnInterval = 7f;
             }
             if (time < 30f && LuggageSpawner.SpawnInterval > 4f) {
@@ -48,11 +53,16 @@ public class GameController : MonoBehaviour {
                 LuggageSpawner.AllowSpawn = false;
             }
 
+            if (time < nextHurryTime) {
+                StartCoroutine(PlayAudioClip(HurryUp));
+                nextHurryTime -= Random.Range(10f, 20f);
+            }
+
             yield return null;
         }
         // end game
-        Instance.TimeDownText.text = "Good Job!";
-
+        TimeDownText.text = "Time over!";
+        StartCoroutine(PlayAudioClip(TimeOver));
         yield return new WaitForSeconds(3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("end");
     }
@@ -66,6 +76,15 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    public IEnumerator PlayAudioClip(AudioClip clip) {
+        AudioSource source = gameObject.AddComponent<AudioSource>();
+        source.clip = clip;
+        source.loop = false;
+        source.Play();
+        yield return new WaitForSeconds(clip.length + 0.5f);
+        //Destroy(source);
+    }
+
     private void Awake() {
         Instance = this;
         Score = 0;
@@ -74,6 +93,6 @@ public class GameController : MonoBehaviour {
 
     private void Start() {
         ScoreStartSize = Instance.ScoreText.fontSize;
-        StartCoroutine(GameProcess());
+        StartCoroutine(Instance.GameProcess());
     }
 }
