@@ -32,5 +32,11 @@ public class LuggageController : MonoBehaviour {
         brokenLuggage.transform.position = originalLuggage.transform.position;
         brokenLuggage.transform.rotation = originalLuggage.transform.rotation;
         Destroy(originalLuggage);
+        Invoke("DestroyObject", 10f);
+    } 
+
+    private void DestroyObject() {
+        Destroy(gameObject);
     }
+
 }
