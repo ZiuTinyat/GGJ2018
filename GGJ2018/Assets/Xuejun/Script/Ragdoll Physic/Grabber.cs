@@ -6,6 +6,8 @@ public class Grabber : MonoBehaviour
 {
     [ReadOnly]
     public ConfigurableJoint Joint;
+    [ReadOnly]
+    public FixedJoint Joint2;
 
     //public Grab MyGrab;
     private GrabHandler m_grabHandler;
@@ -18,14 +20,6 @@ public class Grabber : MonoBehaviour
         m_rb = GetComponent<Rigidbody>();
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.rigidbody.gameObject.layer == 10)
-    //    {
-    //        m_rbToGrab = collision.rigidbody;
-    //    }
-    //}
-
     private void Update()
     {
         if (!m_grabHandler.Grabbing && !Joint)
@@ -33,11 +27,15 @@ public class Grabber : MonoBehaviour
             Destroy(Joint);
         }
 
+        if (!m_grabHandler.Grabbing && !Joint2)
+        {
+            Destroy(Joint2);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             m_grabHandler.Grabbing = true;
             Debug.Log("Mouse Down, Start Grab");
-            //StartGrab();
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -54,45 +52,65 @@ public class Grabber : MonoBehaviour
         {
             Destroy(Joint);
         }
-    }
 
-    //public void StartGrab()
-    //{
-    //    if (m_rbToGrab)
-    //    {
-    //        FixedJoint joint = gameObject.AddComponent<FixedJoint>();
-    //        joint.connectedBody = m_rbToGrab;
-    //    }
-    //}
+        if (Joint2)
+        {
+            Destroy(Joint2);
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (m_grabHandler && m_grabHandler.m_grabStrength >= 0.5f && m_grabHandler.Grabbing &&
-            !Joint && collision.gameObject.layer ==10 )
-        {
-            if (collision.rigidbody)
+        //if (m_grabHandler && m_grabHandler.m_grabStrength >= 0.5f && m_grabHandler.Grabbing &&
+        //    !Joint && collision.gameObject.layer ==10 )
+        //{
+        //    if (collision.rigidbody)
+        //    {
+        //        foreach (var grabber in m_grabHandler.m_grabbers)
+        //        {
+        //            if (grabber.Joint && grabber.Joint.connectedBody != null)
+        //            {
+        //                return;
+        //            }
+        //        }
+        //        m_grabHandler.StartGrab(collision.rigidbody);
+        //    }
+
+        //    Joint = m_rb.gameObject.AddComponent<ConfigurableJoint>();
+        //    Joint.xMotion = ConfigurableJointMotion.Locked;
+        //    Joint.yMotion = ConfigurableJointMotion.Locked;
+        //    Joint.zMotion = ConfigurableJointMotion.Locked;
+        //    Joint.angularXMotion = ConfigurableJointMotion.Locked;
+        //    Joint.angularYMotion = ConfigurableJointMotion.Locked;
+        //    Joint.angularZMotion = ConfigurableJointMotion.Locked;
+        //    Joint.projectionMode = JointProjectionMode.PositionAndRotation;
+        //    Joint.anchor = transform.InverseTransformPoint(collision.contacts[0].point);
+        //    if (collision.gameObject.GetComponent<Rigidbody>())
+        //    {
+        //        Joint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+        //    }
+
+
+        if (m_grabHandler && m_grabHandler.m_grabStrength >= 0.5f && m_grabHandler.Grabbing && !Joint2 && collision.gameObject.layer == 10)
             {
-                foreach (var grabber in m_grabHandler.m_grabbers)
+                if (collision.rigidbody)
                 {
-                    if (grabber.Joint && grabber.Joint.connectedBody != null)
+                    foreach (var grabber in m_grabHandler.m_grabbers)
                     {
-                        return;
+                        if (grabber.Joint2 && grabber.Joint2.connectedBody != null)
+                        {
+                            return;
+                        }
                     }
+
+                    m_grabHandler.StartGrab(collision.rigidbody);
                 }
 
-                m_grabHandler.StartGrab(collision.rigidbody);
+            Joint2 = m_rb.gameObject.AddComponent<FixedJoint>();
+            if (collision.gameObject.GetComponent<Rigidbody>())
+            {
+                Joint2.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
             }
-
-            Joint = m_rb.gameObject.AddComponent<ConfigurableJoint>();
-            Joint.xMotion = ConfigurableJointMotion.Locked;
-            Joint.yMotion = ConfigurableJointMotion.Locked;
-            Joint.zMotion = ConfigurableJointMotion.Locked;
-            Joint.angularXMotion = ConfigurableJointMotion.Locked;
-            Joint.angularYMotion = ConfigurableJointMotion.Locked;
-            Joint.angularZMotion = ConfigurableJointMotion.Locked;
-            Joint.projectionMode = JointProjectionMode.PositionAndRotation;
-            Joint.anchor = transform.InverseTransformPoint(collision.contacts[0].point);
-            if (collision.rigidbody) Joint.connectedBody = collision.rigidbody;
         }
     }
 }
