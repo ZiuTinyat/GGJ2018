@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 
     public static GameController Instance { get; private set; }
     public static int Score { get; private set; }
+    public static int Money { get; private set; }
     private static int ScoreStartSize;
 
     [SerializeField] Text ScoreText;
@@ -16,6 +17,11 @@ public class GameController : MonoBehaviour {
         Instance.ScoreText.text = Score.ToString();
         Instance.StopCoroutine(ScoreEffect());
         Instance.StartCoroutine(ScoreEffect());
+    }
+
+    public static void AddMoney(int money)
+    {
+        Money += money;
     }
 
     static IEnumerator ScoreEffect() {

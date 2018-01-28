@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LuggageController : MonoBehaviour {
 
+
     private Rigidbody m_rigidbody;
     public bool Crushed;
 
