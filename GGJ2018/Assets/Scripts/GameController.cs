@@ -27,7 +27,22 @@ public class GameController : MonoBehaviour {
     }
 
     static IEnumerator GameProcess() {
-        yield return null;
+        Instance.TimeDownText.text = Mathf.RoundToInt(Instance.TotTime).ToString();
+        float time = Instance.TotTime;
+        while (time > 0) {
+
+            if (time < 10f && LuggageSpawner.AllowSpawn) { // stop spawn
+                LuggageSpawner.AllowSpawn = false;
+            }
+
+            Instance.TimeDownText.text = Mathf.CeilToInt(time).ToString();
+            time -= Time.deltaTime;
+            yield return null;
+        }
+        // end game
+        
+        yield return new WaitForSeconds(2f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("end");
     }
 
     static IEnumerator ScoreEffect() {
