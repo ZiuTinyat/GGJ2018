@@ -19,6 +19,11 @@ public class GameController : MonoBehaviour {
         Instance.StartCoroutine(ScoreEffect());
     }
 
+    public static void AddMoney(int money)
+    {
+        Money += money;
+    }
+
     static IEnumerator ScoreEffect() {
         int increase = 40;
         while (increase > 0) {
