@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 23804537686120548}
   - component: {fileID: 64065679302308258}
   - component: {fileID: 54603487526637700}
+  - component: {fileID: 114297947682914418}
   m_Layer: 10
   m_Name: bag
-  m_TagString: Untagged
+  m_TagString: Luggage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,3 +114,15 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 23bd43bdeaabc3b4dbf260a697547382, type: 3}
+--- !u!114 &114297947682914418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519761362713698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00d6703d82306d4eaee6c464761bdcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 3
