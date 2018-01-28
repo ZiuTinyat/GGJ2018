@@ -4,33 +4,36 @@ using UnityEngine;
 
 public class LuggageSpawner : MonoBehaviour {
 
-    private static LuggageSpawner Instance;
+    public static LuggageSpawner Instance;
     public static float SpawnInterval;
     public static bool AllowSpawn;
     
     public GameObject[] LuggageList;
-    public bool Spawing = true;
+    private bool Spawning = false;
 
     private void Awake() {
         Instance = this;
-        SpawnInterval = 5f;
+        SpawnInterval = 10f;
         AllowSpawn = true;
     }
 
     // Use this for initialization
     void Start () {
-		if (LuggageList.Length == 0) {
-            Spawing = false;
-        }
-        StartCoroutine(SpawnCoroutine());
+        
 	}
+
+    public void StartSpawn() {
+        if (Spawning) return;
+        Spawning = true;
+        StartCoroutine(SpawnCoroutine());
+    }
 
     IEnumerator SpawnCoroutine() {
         //float interval = 4f; // temporary
         do {
-            yield return new WaitForSeconds(SpawnInterval);
-            yield return new WaitUntil(() => Spawing);
+            yield return new WaitUntil(() => Spawning);
             SpawLuggage();
+            yield return new WaitForSeconds(SpawnInterval);
 
         } while (AllowSpawn);
 
